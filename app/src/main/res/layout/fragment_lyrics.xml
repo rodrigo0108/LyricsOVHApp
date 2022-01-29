@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameSongTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameSongTextView"
+        app:srcCompat="@drawable/ic_arrow" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameSongTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_10"
+        android:fontFamily="@font/mark_pro_medium"
+        android:gravity="center"
+        android:textColor="@color/gray_800"
+        android:textSize="@dimen/size_18_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nombre de la cancion" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lyricsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size_20"
+        android:fontFamily="@font/mark_pro"
+        android:gravity="center_horizontal"
+        android:scrollbars="vertical"
+        android:textColor="@color/gray_800"
+        android:textSize="@dimen/size_12_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameSongTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/errorMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mark_pro_medium"
+        android:gravity="center_horizontal"
+        android:text="La canción seleccionada\nno cuenta con letra"
+        android:textColor="@color/gray_800"
+        android:textSize="@dimen/size_20_sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameSongTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
